@@ -1,10 +1,11 @@
 :root{
     --primary-color: #e2854c;
     --footer-color: #159396;
-    --background-down-color: #67c7c9
+    --background-down-color: #67c7c9;
     --text-color: #000;
     --text-color-menu: #fff;
     --background-color: #fff;
+    --ops-color: #000;
     --font-family: 'Roboto', sans-serif;
     --font-size: 1rem;
 }
@@ -35,6 +36,10 @@ body{
 header{
     display: grid;
     grid-template-rows: 4.7rem 61.4rem;
+    background-image: url(../images/backgroundUp.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 nav{
     display: flex;
@@ -47,11 +52,17 @@ nav{
     display: inline-flex;
 }
 .header__nav-item{
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
+    border-right: 2px solid var(--text-color-menu);
     margin: 0.5rem;
+    
+}
+.header__nav-item:last-child{
+    border-right: 0;
 }
 .header__nav-item a{
     color: var(--text-color-menu);
+    padding-right: 1rem;
 }
 .header__main{
     display: grid;
@@ -60,6 +71,11 @@ nav{
 .header__top{
     display: grid;
     grid-template-rows: 1fr 2fr;
+    background: linear-gradient(180deg, rgba(226, 133, 76, 0.5) 0%, rgba(226, 133, 76, 0) 100%), url(../images/plaza.jpg);
+    /*background-image: url(../images/plaza.jpg);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header__top-logo{
     display: grid;
@@ -76,17 +92,55 @@ nav{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+h1{
+    white-space: pre-line;
 }
 .header__top-banner{
     display: grid;
-    grid-template-columns: ;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .header__footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 1rem;
 }
 .header__menu-footer{
     display: inline-flex;
+}
+.header__menu-tlf, .header__menu-hora, .header__menu-rrss{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    border-right: 2px solid var(--ops-color);
+}
+.header__menu-rrss{
+    border-right: 0;
+}
+.header__menu-tlf .fas,
+.header__menu-tlf p,
+.header__menu-hora .header__menu-hora-parrafo,
+.header__menu-hora .far,
+.header__menu-rrss .header__menu-rrss-icons
+{
+    padding-right: 1rem;
+}
+.header__menu-rrss-icons{
+    color: var(--text-color);
+    font-size: calc(var(--font-size) + 0.75rem);
+}
+.fas, .far{
+    font-size: calc(var(--font-size) + 0.25rem);
+}
+.header__menu-buscar{
+    background: var(--background-color);
+    border: 3px solid var(--background-down-color);
+    box-sizing: border-box;
+    border-radius: 50px;
+    /*height: 2rem;*/
 }
