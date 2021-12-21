@@ -35,7 +35,7 @@ body{
 }
 header{
     display: grid;
-    grid-template-rows: 4.7rem 61.4rem;
+    grid-template-rows: 3.5rem 61.4rem;
     background-image: url(../images/backgroundUp.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -81,17 +81,13 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.header__logo{
+.header__logo, .header__oager{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .header__oager{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 h1{
@@ -100,6 +96,15 @@ h1{
 .header__top-banner{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+.header__banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header__banner img{
+    border-radius: 10px;
 }
 .header__footer{
     display: flex;
@@ -142,5 +147,58 @@ h1{
     border: 3px solid var(--background-down-color);
     box-sizing: border-box;
     border-radius: 50px;
-    /*height: 2rem;*/
+}
+.header__menu-buscar i{
+    font-size: var(--font-size);
+    padding: calc(var(--font-size) - 0.5rem);
+}
+main{
+    display: grid;
+    grid-template-rows: auto;
+}
+.main__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+}
+.main__menu-cita, .main__menu-sede, .main__menu-auto, .main__menu-defens{
+    padding: 1rem 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+.main__menu i{
+    font-size: calc(var(--font-size) + 6rem);
+    padding: 1rem;
+    color: var(--footer-color);
+}
+.main__menu p{
+    font-size: calc(var(--font-size) + 0.25rem);
+    padding: 1rem;
+    color: var(--footer-color);
+}
+.main__aviso{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 3rem 10rem;
+    border: 1px solid var(--background-down-color);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.main__aviso .fas{
+    color: var(--footer-color);
+    padding: 1rem;
+}
+.main__aviso-parrafo{
+    padding: 1rem;
+    padding-left: 0;
+}
+.main__apartados{
+    background-image: url(../images/backgroundDown.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
