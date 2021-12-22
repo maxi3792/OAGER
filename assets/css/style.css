@@ -71,8 +71,8 @@ nav{
 .header__top{
     display: grid;
     grid-template-rows: 1fr 2fr;
-    background: linear-gradient(180deg, rgba(226, 133, 76, 0.5) 0%, rgba(226, 133, 76, 0) 100%), url(../images/plaza.jpg);
-    /*background-image: url(../images/plaza.jpg);*/
+    /*background: linear-gradient(180deg, rgba(226, 133, 76, 0.5) 0%, rgba(226, 133, 76, 0) 100%), url(../images/plaza.jpg);*/
+    background-image: url(../images/plazaSala.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,16 +95,41 @@ h1{
 }
 .header__top-banner{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto 16.5rem auto;
 }
-.header__banner{
+.header__banner-cita{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header__banner-plus{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header__banner-cita img, .header__banner-plus img{
+    border-radius: 10px;
+}
+.header__avisos{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.header__banner img{
+.header__avisos p{
+    display: inline-flex;
+    width: 241px;
+    height: 241px;
+    background-color: var(--background-down-color);
     border-radius: 10px;
+    color: var(--text-color-menu);
+    justify-content: center;
+    padding: 1rem;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: calc(var(--font-size) - 0.1rem);
 }
 .header__footer{
     display: flex;
@@ -159,14 +184,23 @@ main{
 .main__menu{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 9rem;
 }
 .main__menu-cita, .main__menu-sede, .main__menu-auto, .main__menu-defens{
     padding: 1rem 2.5rem;
     text-align: center;
     font-weight: bold;
+}
+p{
+    white-space: pre-line;
+}
+.main__menu-cita{
+    padding-left: 0;
+}
+.main__menu-defens{
+    padding-right: 0;
 }
 .main__menu i{
     font-size: calc(var(--font-size) + 6rem);
@@ -183,7 +217,7 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin: 3rem 10rem;
+    margin: 3rem 14rem;
     border: 1px solid var(--background-down-color);
     box-sizing: border-box;
     border-radius: 5px;
@@ -220,13 +254,63 @@ main{
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 0px 10px 10px;
-    height: 16rem;
+    height: 18.5rem;
     padding: 0.5rem;
 }
 .main__apartados li{
     text-align: center;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.5rem;
 }
 .main__apartados a{
     color: var(--text-color);
+}
+footer{
+    background-color: var(--footer-color);
+}
+.footer__main{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    padding: 1.25rem 15rem;
+    gap: 1.25rem;
+}
+.footer__logo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer__parrafo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer__parrafo p, .footer__parrafo a{
+    color: var(--text-color-menu);
+    font-size: calc(var(--font-size) - 0.1rem);
+    text-align: justify;
+}
+.footer__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-top: 2px solid var(--background-color);
+}
+.footer__menu-navegacion{
+    display: inline-flex;
+}
+.footer__nav-item{
+    padding: 0 1rem;
+    border-right: 2px solid var(--text-color-menu);
+    margin: 0.5rem;
+    text-transform: uppercase;
+}
+.footer__nav-item:last-child{
+    border-right: 0;
+}
+.footer__nav-item a{
+    color: var(--text-color-menu);
+    padding-right: 1rem;
+    font-size: calc(var(--font-size) - 0.125rem);
 }
