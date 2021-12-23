@@ -41,6 +41,15 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.header__nav-logo{
+    display: none;
+}
 nav{
     display: flex;
     flex-direction: row;
@@ -55,7 +64,6 @@ nav{
     padding: 0 1rem;
     border-right: 2px solid var(--text-color-menu);
     margin: 0.5rem;
-    
 }
 .header__nav-item:last-child{
     border-right: 0;
@@ -64,6 +72,12 @@ nav{
     color: var(--text-color-menu);
     padding-right: 1rem;
 }
+.header__nav-item:hover{
+    opacity: 0.7;
+}
+.header__nav-item .fas{
+    display: none;
+}
 .header__main{
     display: grid;
     grid-template-rows: 45rem 16.5rem;
@@ -71,7 +85,6 @@ nav{
 .header__top{
     display: grid;
     grid-template-rows: 1fr 2fr;
-    /*background: linear-gradient(180deg, rgba(226, 133, 76, 0.5) 0%, rgba(226, 133, 76, 0) 100%), url(../images/plaza.jpg);*/
     background-image: url(../images/plazaSala.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -149,6 +162,9 @@ h1{
     padding: 0 1rem;
     border-right: 2px solid var(--ops-color);
 }
+.header__menu-tlf p{
+    white-space: pre-line;
+}
 .header__menu-rrss{
     border-right: 0;
 }
@@ -159,10 +175,14 @@ h1{
 .header__menu-rrss .header__menu-rrss-icons
 {
     padding-right: 1rem;
+    color: var(--text-color);
 }
 .header__menu-rrss-icons{
     color: var(--text-color);
     font-size: calc(var(--font-size) + 0.75rem);
+}
+.header__menu-rrss-icons i:hover{
+    color: var(--text-color-menu);
 }
 .fas, .far{
     font-size: calc(var(--font-size) + 0.25rem);
@@ -176,6 +196,136 @@ h1{
 .header__menu-buscar i{
     font-size: var(--font-size);
     padding: calc(var(--font-size) - 0.5rem);
+}
+input:focus{
+    border: 0;
+    outline: 0 none
+}
+.header__menu-rrss form{
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width: 1200px){
+    .header__nav-item .fas{
+        display: block;
+        padding: 1rem;
+        font-size: calc(var(--font-size) + 0.75rem);
+    }
+    .header__menu-navegacion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__nav-item{
+        display: flex;
+        border-right: none;
+    }
+    .header__nav-item-responsive{
+        display: none;
+    }
+    .header__top-banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__banner-cita, .header__banner-plus, .header__avisos{
+        padding: 1rem;
+    }
+    .header__avisos p{
+        width: 450px;
+        height: 143px;
+    }
+}
+@media screen and (max-width: 768px){
+    .header__nav-logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .header__nav-logo i{
+        font-size: calc(var(--font-size) + 1rem);
+    }
+    .header__logo-responsive img{
+        height: 3rem;
+    }
+    nav{
+        display: none;
+    }
+    .header__top{
+        display: grid;
+        grid-template-rows: auto;
+    }
+    .header__top-logo{
+        display: none;
+    }
+    .header__top-banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__banner-cita, .header__banner-plus, .header__avisos{
+        padding: 1rem 0;
+    }
+    .header__avisos p{
+        width: 450px;
+        height: 143px;
+    }
+    .header__menu-tlf, .header__menu-hora, .header__menu-rrss{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__menu-hora p, .header__menu-tlf p,
+    .header__menu-hora i, .header__menu-tlf i
+    {
+        text-align: center;
+        padding: 0.2rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .header__top{
+        background-image: url(../images/plazaSalaM.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .header__avisos p{
+        width: 300px;
+        height: 95px;
+    }
+    .header__footer{
+        padding-top: 0;
+    }
+    .header__menu-footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .header__menu-tlf, .header__menu-hora, .header__menu-rrss{
+        border-right: none;
+        padding: 1rem;
+    }
+    .header__menu-tlf{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "icono numero"
+                             ". hora";
+    }
+    .header__menu-tlf-hora{
+        grid-area: hora;
+    }
+    .header__menu-tlf-num{
+        grid-area: numero;
+    }
+    .header__menu-rrss{
+        display: flex;
+        flex-direction: row;
+    }
 }
 main{
     display: grid;
@@ -193,7 +343,14 @@ main{
     text-align: center;
     font-weight: bold;
 }
-p{
+.main__menu-cita:hover, 
+.main__menu-sede:hover, 
+.main__menu-auto:hover, 
+.main__menu-defens:hover
+{
+    opacity: 0.7;
+}
+.main__menu-defens p{
     white-space: pre-line;
 }
 .main__menu-cita{
@@ -217,7 +374,7 @@ p{
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin: 3rem 14rem;
+    margin: 3rem 9rem;
     border: 1px solid var(--background-down-color);
     box-sizing: border-box;
     border-radius: 5px;
@@ -234,12 +391,21 @@ p{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "organizacion normativa calendario info-catastral"
+                         "buzon documentacion tramitacion calidad"
+                         ". info-financiera estadisticas .";
     grid-gap: 2rem;
     padding: 9rem;
     background-image: url(../images/backgroundDown.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.main__apartados-informacion-financiera{
+    grid-area: info-financiera;
+}
+.main__apartados-estadisticas{
+    grid-area: estadisticas;
 }
 .main__apartados h2{
     background: var(--footer-color);
@@ -263,6 +429,85 @@ p{
 }
 .main__apartados a{
     color: var(--text-color);
+}
+.main__apartados a:hover{
+    opacity: 0.8;
+    font-weight: bold;
+}
+@media screen and (max-width: 1200px){
+    .main__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+    .main__menu-cita, 
+    .main__menu-sede, 
+    .main__menu-auto, 
+    .main__menu-defens{
+        padding: 0;
+    }
+    .main__apartados{
+        padding: 2rem;
+    }
+    .main__aviso{
+        margin: 3rem 2rem;
+    }
+}
+@media screen and (max-width: 992px){
+    .main__menu {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+    }
+    .main__apartados{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "organizacion normativa calendario"
+                            "info-catastral buzon documentacion"
+                            "tramitacion calidad info-financiera"
+                            ". estadisticas .";
+        grid-gap: 2rem;
+        padding: 2rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .main__menu {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: space-evenly;
+        grid-gap: 5rem;
+    }
+    .main__apartados{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "organizacion normativa"
+                            "calendario info-catastral"
+                            "buzon documentacion"
+                            "tramitacion calidad"
+                            "info-financiera estadisticas";
+        grid-gap: 2rem;
+        padding: 2rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .main__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main__apartados{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem;
+    }
+    .main__aviso{
+        margin: 5rem;
+    }
 }
 footer{
     background-color: var(--footer-color);
@@ -289,6 +534,9 @@ footer{
     font-size: calc(var(--font-size) - 0.1rem);
     text-align: justify;
 }
+.footer__parrafo a:hover{
+    opacity: 0.7;
+}
 .footer__menu{
     display: flex;
     flex-direction: row;
@@ -304,7 +552,7 @@ footer{
     padding: 0 1rem;
     border-right: 2px solid var(--text-color-menu);
     margin: 0.5rem;
-    text-transform: uppercase;
+    text-align: center;
 }
 .footer__nav-item:last-child{
     border-right: 0;
@@ -313,4 +561,46 @@ footer{
     color: var(--text-color-menu);
     padding-right: 1rem;
     font-size: calc(var(--font-size) - 0.125rem);
+    text-transform: uppercase;    
+}
+.footer__nav-item:hover{
+    opacity: 0.7;
+}
+@media screen and (max-width: 1200px){
+    .footer__main{
+        padding: 1.25rem 7rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .footer__main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem 3rem;
+    }
+    .footer__parrafo p{
+        text-align: center;
+    }
+    .footer__nav-item{
+        margin: 0
+    }
+    .footer__nav-item a{
+        padding-right: 0   
+    }
+}
+@media screen and (max-width: 576px){
+    .footer__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .footer__menu-navegacion{
+        display: block;
+    }
+    .footer__nav-item{
+        border-right: none;
+        padding: 0.2rem;
+    }
 }

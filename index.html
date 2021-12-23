@@ -10,21 +10,36 @@
     </head>
     <body>
         <header>
-            <nav>
-                <ul class="header__menu-navegacion">
-                    <li class="header__nav-item"><a href="#" aria-label="Ir a Inicio">Inicio</a></li>
-                    <li class="header__nav-item"><a href="/contenidos.aspx?ID=245" aria-label="Ir a Accesibilidad">Accesibilidad</a></li>
-                    <li class="header__nav-item"><a href="/contenidos.aspx?ID=37" aria-label="Ir a Contacto">Contacto</a></li>
-                    <li class="header__nav-item"><a href="/oager/perfil_contratante.aspx?ID=225" aria-label="Ir a Perfil del contratante">Perfil del Contratante</a></li>
-                    <li class="header__nav-item"><a href="/ciudadano/anunciosbop.aspx?ID=40" aria-label="Ir a Tablón de edictos electrónicos">Tablón de edictos electrónicos</a></li>
-                    <li class="header__nav-item"><a href="/contenidos.aspx?ID=198" aria-label="Ir a Bienvenida del alcalde">Bienvenida del Alcalde</a></li>
-                </ul>
-            </nav>
+            <div class="header__nav">
+                <div class="header__nav-logo">
+                    <figure class="header__logo-responsive">
+                        <a href="#" aria-label="Ir a OAGER" title="OAGER Salamanca">
+                            <img src="assets/images/LogoAyto.png" alt="Escudo Ayuntamiento de Salamanca">
+                        </a>
+                    </figure>
+                    <div class="header__oager-responsive">
+                        <h1>OAGER</h1>
+                    </div>
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul class="header__menu-navegacion">
+                        <li class="header__nav-item"><a href="#" aria-label="Ir a Inicio"><i class="fas fa-home"></i><span class="header__nav-item-responsive">Inicio</span></a></li>
+                        <li class="header__nav-item"><a href="/contenidos.aspx?ID=245" aria-label="Ir a Accesibilidad"><i class="fas fa-wheelchair"></i><span class="header__nav-item-responsive">Accesibilidad</span></a></li>
+                        <li class="header__nav-item"><a href="/contenidos.aspx?ID=37" aria-label="Ir a Contacto"><i class="fas fa-envelope"></i><span class="header__nav-item-responsive">Contacto</span></a></li>
+                        <li class="header__nav-item"><a href="/oager/perfil_contratante.aspx?ID=225" aria-label="Ir a Perfil del contratante"><i class="fas fa-users"></i><span class="header__nav-item-responsive">Perfil del Contratante</span></a></li>
+                        <li class="header__nav-item"><a href="/ciudadano/anunciosbop.aspx?ID=40" aria-label="Ir a Tablón de edictos electrónicos"><i class="fas fa-chalkboard"></i><span class="header__nav-item-responsive">Tablón de edictos electrónicos</span></a></li>
+                        <li class="header__nav-item"><a href="/contenidos.aspx?ID=198" aria-label="Ir a Bienvenida del alcalde"><i class="fas fa-user-tie"></i><span class="header__nav-item-responsive">Bienvenida del Alcalde</span></a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="header__main">
                 <div class="header__top">
                     <div class="header__top-logo">
-                        <figure class="header__logo" href="#" aria-label="Ir a OAGER">
-                            <img src="assets/images/LogoAyto.png" alt="Escudo Ayuntamiento de Salamanca">
+                        <figure class="header__logo">
+                            <a href="#" aria-label="Ir a OAGER" title="OAGER Salamanca">
+                                <img src="assets/images/LogoAyto.png" alt="Escudo Ayuntamiento de Salamanca">
+                            </a>
                         </figure>
                         <div class="header__oager">
                             <h1>Organismo Autónomo de 
@@ -32,25 +47,39 @@
                         </div>
                     </div>
                     <div class="header__top-banner">
-                        <div class="header__banner-cita" href="/oficinaVirtual/cita_previa/solicitarCitaPrevia.aspx" aria-label="Ir a Cita Previa">
-                            <img src="assets/images/bannerCitaPrevia.jpg" alt="Cita previa" width="380" height="241">
+                        <div class="header__banner-cita">
+                            <a href="/oficinaVirtual/cita_previa/solicitarCitaPrevia.aspx" aria-label="Ir a Cita Previa" title="Cita Previa">
+                                <picture>
+                                    <source srcset="assets/images/bannerCitaPreviaM.jpg" media="(max-width: 576px)" loading="lazy" width="300px">
+                                    <source srcset="assets/images/bannerCitaPreviaM.jpg" media="(max-width: 1200px)" loading="lazy" width="450px">
+                                    <img src="assets/images/bannerCitaPrevia.jpg" alt="Cita Previa" loading="lazy" width="380px" height="241px"> 
+                               </picture>
+                            </a>
                         </div>
                         <div class="header__avisos">
                             <p>Avisos Importantes</p>
                         </div>
-                        <div class="header__banner-plus" href="/contenidos.aspx?ID=312" aria-label="Ir a plusvalías">
-                            <img src="assets/images/bannerNuevasPlusavlias.png" alt="Comunicación IIVTNU" width="380" height="241">
+                        <div class="header__banner-plus">
+                            <a href="/contenidos.aspx?ID=312" aria-label="Ir a plusvalías" title="Plusvalías">
+                                <picture>
+                                    <source srcset="assets/images/bannerNuevasPlusavliasM.png" media="(max-width: 576px)" loading="lazy" width="300px">
+                                    <source srcset="assets/images/bannerNuevasPlusavliasM.png" media="(max-width: 1200px)" loading="lazy" width="450px">
+                                    <img src="assets/images/bannerNuevasPlusavlias.png" alt="Plusvalías" loading="lazy" width="380px" height="241px"> 
+                               </picture>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="header__footer">
                     <ul class="header__menu-footer">
                         <li class="header__menu-tlf">
-                            <i class="fas fa-phone-alt" href="tel:+34900701000"></i>
-                            <p>900 701 000</p>
-                            <div>
-                                <p>Teléfono de atención gratuito</p>
-                                <p>Lunes a Viernes de 8:00 a 20:00</p>
+                            <i class="fas fa-phone-alt"></i>
+                            <a class="header__menu-tlf-num" href="tel:+34900701000" aria-label="Llamar al OAGER" title="Llamar al OAGER">
+                                <p>900 701 000</p>
+                            </a>
+                            <div class="header__menu-tfl-hora">
+                                <p>Teléfono de atención gratuito
+                                    Lunes a Viernes de 8:00 a 20:00</p>
                             </div>
                         </li>
                         <li class="header__menu-hora">
@@ -59,12 +88,14 @@
                             <p>Martes, 30 de noviembre de 2020</p>
                         </li>
                         <li class="header__menu-rrss">
-                            <a class="header__menu-rrss-icons" href="https://twitter.com/oagersalamanca" target="_blank" aria-label="Ir a Twitter OAGER">
-                                <i class="fab fa-twitter-square" alt="Twitter OAGER"></i>
-                            </a>
-                            <a class="header__menu-rrss-icons" href="https://www.facebook.com/oagersalamanca" target="_blank" aria-label="Ir a Facebook OAGER">
-                                <i class="fab fa-facebook-square" alt="Facebook OAGER"></i>
-                            </a>
+                            <div>
+                                <a class="header__menu-rrss-icons" href="https://twitter.com/oagersalamanca" target="_blank" aria-label="Ir a Twitter OAGER" title="Twitter OAGER">
+                                    <i class="fab fa-twitter-square" alt="Twitter OAGER"></i>
+                                </a>
+                                <a class="header__menu-rrss-icons" href="https://www.facebook.com/oagersalamanca" target="_blank" aria-label="Ir a Facebook OAGER" title="Facebook OAGER">
+                                    <i class="fab fa-facebook-square" alt="Facebook OAGER"></i>
+                                </a>
+                            </div>
                             <form class="header__menu-buscar">
                                 <i class="fas fa-search"></i>
                                 <input type="text" value="Buscar texto">
@@ -111,7 +142,7 @@
                 </div>
             </div>
             <div class="main__apartados">
-                <div>
+                <div class="main__apartados-organizacion">
                     <h2>Organización</h2>
                     <ul>
                         <li><a href="/contenidos.aspx?ID=87">Organización Política</a></li>
@@ -123,7 +154,7 @@
                         <li><a href="/contenidos.aspx?ID=299">Oficinas</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="main__apartados-normativa">
                     <h2>Normativa</h2>
                     <ul>
                         <li><a href="/oager/normativa.aspx">Legislación</a></li>
@@ -134,28 +165,28 @@
                         <li><a href="/oager/consultasTributarias.aspx">Consultas tributarias</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="main__apartados-calendario">
                     <h2>Calendario</h2>
                     <ul>
                         <li><a href="/ciudadano/calendario-tributo.aspx">Por Tributos</a></li>
                         <li><a href="/ciudadano/calendario-meses.aspx">Por Meses</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="main__apartados-informacion-catastral">
                     <h2>Información</h2>
                     <ul>
                         <li><a href="/contenidos.aspx?ID=242">Competencias</a></li>
                         <li><a href="/contenidos.aspx?ID=243">Estadísticas</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h2>Buzón del</h2>
+                <div class="main__apartados-buzon">
+                    <h2>Buzón</h2>
                     <ul>
                         <li><a href="https://www.oager.net/SedeElectronicaClave/sinCert/default.aspx?returnurl=/sedeelectronicaclave/conCert/buzoncontribuyente.aspx&ID=178" target="_blank">Con Certificado Digital</a></li>
                         <li><a href="https://www.oager.net/SedeElectronicaClave/sinCert/buzoncontribuyente.aspx?ID=179" target="_blank">Sin Certificado Digital</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="main__apartados-documentacion">
                     <h2>Documentación</h2>
                     <ul>
                         <li><a href="/contenidos.aspx?ID=174">Formularios</a></li>
@@ -164,7 +195,7 @@
                         <li><a href="/contenidos.aspx?ID=175">Certificado Digital</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="main__apartados-tramitacion">
                     <h2>Tramitación</h2>
                     <ul>
                         <li><a href="/contenidos.aspx?ID=32">Seguimiento de Expedientes</a></li>
@@ -177,7 +208,7 @@
                         <li><a href="https://www.oager.net/SedeElectronicaClave/sinCert/" target="_blank">Sede Electrónica</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="main__apartados-calidad">
                     <h2>Calidad</h2>
                     <ul>
                         <li><a href="/contenidos.aspx?ID=207">ISO 9001</a></li>
@@ -188,7 +219,7 @@
                         <li><a href="/contenidos.aspx?ID=289">Encuesta Satisfacción 2019</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="main__apartados-informacion-financiera">
                     <h2>Información</h2>
                     <ul>
                         <li><a href="/oficinaVirtual/informacionContribuyente/presupuesto.aspx">Presupuesto</a></li>
@@ -198,7 +229,7 @@
                         <li><a href="/contenidos.aspx?ID=256">Adjudicaciones superiores a 3000.00 euros</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="main__apartados-estadisticas">
                     <h2>Estadísticas</h2>
                     <ul>
                         <li><a href="/estadisticas/estadisticasGenerales.aspx">Estadísticas Generales</a></li>
@@ -219,10 +250,10 @@
         <footer>
             <div class="footer__main">
                 <div class="footer__logo">
-                    <a href="https://www.sgs.com/en/certified-clients-and-products/certified-client-directory" target="_blank" aria-label="Ir a la Certificación ISO 9001">
+                    <a href="https://www.sgs.com/en/certified-clients-and-products/certified-client-directory" target="_blank" aria-label="Ir a la Certificación ISO 9001" title="Certificación ISO 9001">
                         <img src="assets/images/ISO-9001.png" alt="Logotipo Certificacion ISO 9001" width="90px">
                     </a>
-                    <a href="https://www.sgs.com/en/certified-clients-and-products/certified-client-directory" target="_blank" aria-label="Ir a la Certificación ISO 27001">
+                    <a href="https://www.sgs.com/en/certified-clients-and-products/certified-client-directory" target="_blank" aria-label="Ir a la Certificación ISO 27001" title="Certificación ISO 27001">
                         <img src="assets/images/ISO-27001.png" alt="Logotipo Certificacion ISO 27001" width="90px">
                     </a>
                 </div>
@@ -233,7 +264,7 @@
                     </p>
                 </div>
                 <div class="footer__logo">
-                    <a href="https://www.google.es/maps/place/Organismo+Aut%C3%B3nomo+de+Gesti%C3%B3n+Econ%C3%B3mica+y+Recaudaci%C3%B3n/@40.9665652,-5.663921,18z/data=!4m5!3m4!1s0xd3f26168ce3a127:0x4f92f5ececccfe86!8m2!3d40.9660609!4d-5.6652023?shorturl=1" target="_blank" aria-label="Ir a la ubicación del OAGER">
+                    <a href="https://www.google.es/maps/place/Organismo+Aut%C3%B3nomo+de+Gesti%C3%B3n+Econ%C3%B3mica+y+Recaudaci%C3%B3n/@40.9665652,-5.663921,18z/data=!4m5!3m4!1s0xd3f26168ce3a127:0x4f92f5ececccfe86!8m2!3d40.9660609!4d-5.6652023?shorturl=1" target="_blank" aria-label="Ir a la ubicación del OAGER" title="Ubicaión del OAGER">
                         <img src="assets/images/espozymina.png" alt="Fachada OAGER Salamanca" width="90px">
                     </a>
                 </div>
