@@ -171,6 +171,7 @@ h1{
 .header__menu-tlf .fas,
 .header__menu-tlf p,
 .header__menu-hora .header__menu-hora-parrafo,
+.header__menu-hora .header__menu-hora-hora,
 .header__menu-hora .far,
 .header__menu-rrss .header__menu-rrss-icons
 {
@@ -236,6 +237,27 @@ input:focus{
         width: 450px;
         height: 143px;
     }
+    .header__menu-rrss2{
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 992px){
+    .header__menu-tlf .fas, 
+    .header__menu-tlf p, 
+    .header__menu-hora .header__menu-hora-parrafo, 
+    .header__menu-hora .header__menu-hora-hora, 
+    .header__menu-hora .far, 
+    .header__menu-rrss .header__menu-rrss-icons {
+        text-align: center;
+        padding: 0.2rem;
+    }
+    .header__menu-tlf, .header__menu-hora, .header__menu-rrss{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media screen and (max-width: 768px){
     .header__nav-logo{
@@ -288,11 +310,17 @@ input:focus{
     }
 }
 @media screen and (max-width: 576px){
+    .header__main{
+        grid-template-rows: 487px auto;
+    }
     .header__top{
         background-image: url(../images/plazaSalaM.png);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto;
+    }
+    .header__top, .header__top-banner{
+        height: 487px;
     }
     .header__avisos p{
         width: 300px;
@@ -319,8 +347,19 @@ input:focus{
     .header__menu-tlf-hora{
         grid-area: hora;
     }
-    .header__menu-tlf-num{
-        grid-area: numero;
+    .header__menu-hora{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "icono numero"
+                             ". fecha";
+    }
+    .header__menu-hora-parrafo{
+        grid-area: fecha;
+    }
+    .header__menu-tlf-num p, .header__menu-tlf-hora p, 
+    .header__menu-hora p, .header__menu-hora .header__menu-hora-hora{
+        text-align: left;
     }
     .header__menu-rrss{
         display: flex;
