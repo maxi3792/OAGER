@@ -60,6 +60,22 @@ nav{
 .header__menu-navegacion{
     display: inline-flex;
 }
+.header__menu-navegacion-responsive{
+    align-items: center;
+    border-bottom: 2px solid var(--text-color-menu);
+    display: none;
+    grid-template-columns: 85% 15%;
+    grid-template-rows: auto;
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100%;    
+}
+.header__menu-navegacion-responsive p{
+    font-size: calc(var(--font-size) + 1rem);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 15%;
+}
 .header__nav-item{
     padding: 0 1rem;
     border-right: 2px solid var(--text-color-menu);
@@ -71,6 +87,9 @@ nav{
 .header__nav-item a{
     color: var(--text-color-menu);
     padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 .header__nav-item:hover{
     opacity: 0.7;
@@ -220,6 +239,7 @@ input:focus{
     .header__nav-item{
         display: flex;
         border-right: none;
+        width: 100%;
     }
     .header__nav-item-responsive{
         display: none;
@@ -267,14 +287,27 @@ input:focus{
         align-items: center;
         width: 100%;
     }
-    .header__nav-logo i{
+    .header__nav-logo i,
+    .header__menu-navegacion-responsive i{
         font-size: calc(var(--font-size) + 1rem);
+        cursor: pointer;
+        transition: all 0.1s ease;
+    }
+    .header__nav-logo i:hover,
+    .header__menu-navegacion-responsive i:hover{
+        opacity: .5;
     }
     .header__logo-responsive img{
         height: 3rem;
     }
     nav{
-        display: none;
+        height: 100vh;
+        left: -100%;
+        overflow-y: auto;
+        position: absolute;
+        top: 0;
+        transition: all 0.3s ease;
+        width: 100%
     }
     .header__top{
         display: grid;
@@ -650,3 +683,36 @@ footer{
         padding: 0.2rem;
     }
 }
+/*__Menú responsive */
+.aparecer-menu{
+    left: 0;
+}
+.visible{
+    display: grid!important;
+}
+.hide{
+    display: none!important;
+}
+.column{
+    flex-direction: column;    
+    justify-content: flex-start;
+    width: 100%
+}
+.border-inf{
+    border-bottom: 2px solid var(--text-color-menu);
+}
+.padding-tb{
+    padding: 1.5rem 0;
+}
+.no-margin{
+    margin: 0!important;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.font-size-max{
+    font-size: calc(var(--font-size) + .825rem);
+}
+.noscroll{
+    overflow: hidden;
+  }
