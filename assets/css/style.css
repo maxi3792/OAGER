@@ -36,7 +36,7 @@ body{
 header{
     display: grid;
     grid-template-rows: 3.5rem 61.4rem;
-    background-image: url(../images/backgroundUp.png);
+    background-image: url(../images/backgroundUp.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -104,7 +104,7 @@ nav{
 .header__top{
     display: grid;
     grid-template-rows: 1fr 2fr;
-    background-image: url(../images/plazaSala.png);
+    background-image: url(../images/plazaSala.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -347,7 +347,7 @@ input:focus{
         grid-template-rows: 487px auto;
     }
     .header__top{
-        background-image: url(../images/plazaSalaM.png);
+        background-image: url(../images/plazaSalaM.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto;
@@ -472,7 +472,7 @@ main{
                          ". info-financiera estadisticas .";
     grid-gap: 2rem;
     padding: 9rem;
-    background-image: url(../images/backgroundDown.png);
+    background-image: url(../images/backgroundDown.webp);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
